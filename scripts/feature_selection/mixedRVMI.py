@@ -1,3 +1,4 @@
+# coding=utf-8
 from scipy.special import digamma
 from scipy.spatial import cKDTree
 import numpy as np

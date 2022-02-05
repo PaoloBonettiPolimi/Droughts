@@ -1,3 +1,4 @@
+# coding=utf-8
 import argparse
 import glob
 import os
@@ -15,8 +16,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--k", type=int) # k-neighbors
     parser.add_argument("--backward", type=str, default="t")
+    parser.add_argument("--nproc", nargs='?', const=1, type=int)
     parser.add_argument("--ScaleAndNoise", type=str, default="ScaleAndNoise")
-    parser.add_argument("--classification", nargs='?', const=1, type=int) 
+    parser.add_argument("--classification", nargs='?', const=0, type=int) # setto a 0 così per default considera un problema di regressione 
     parser.add_argument("--filename", type=str) # full path to file, it must be a pickle
     args = parser.parse_args()
 
