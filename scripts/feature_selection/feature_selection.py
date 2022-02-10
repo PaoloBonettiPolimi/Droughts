@@ -34,7 +34,7 @@ def scoreParallelFeatures(features, target, k, nproc):
     'Versione con parallelismo dello score'
     args=[]
     for i in range(features.shape[1]):
-        args.append(features[:, i], target, np.delete(features,i,axis=1), k)
+        args.append((features[:, i], target, np.delete(features,i,axis=1), k))
     with Pool(nproc) as p:
         scores = p.starmap(CMIEstimate, args)
     scores = np.array(scores)

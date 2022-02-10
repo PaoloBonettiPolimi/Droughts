@@ -22,6 +22,7 @@ if __name__ == "__main__":
     parser.add_argument("--filename", type=str) # full path to file, it must be a pickle
     args = parser.parse_args()
 
+    print("NPROC : " + str(args.nproc))
     #input_folder = os.path.join(os.getcwd(), "data", "real")
     #filenames = glob.glob(os.path.join(input_folder, "*.pickle")) # get dataset files in pickle format
 
@@ -63,7 +64,7 @@ if __name__ == "__main__":
         res["delta"].append(delta)
         threshold = getThreshold(task, target, delta) # for the current delta this is the maximum information we want to loose in backward after pruning the worse features
         print("Current Threshold: {0}".format(threshold))
-        relevantFeatures = backwardFeatureSelection(threshold,features,target,res, args.k) # CMI feature selection
+        relevantFeatures = backwardFeatureSelection(threshold,features,target,res, args.k, args.nproc) # CMI feature selection
         res["selectedFeatures"].append(relevantFeatures)
         print("selected Features: {0}".format(res["selectedFeatures"]))
     #    res["accuracy"].append(computeAccuracy(task, relevantFeatures, target)) # performance di un modello lineare 
