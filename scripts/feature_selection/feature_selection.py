@@ -1,7 +1,7 @@
 # coding=utf-8
 import numpy as np
 from multiprocessing import Pool
-from feature_selection.mixedRVMI import CMIEstimate
+from feature_selection.mixedRVMI import CMIEstimate,estimateAllMI
 
 def backwardFeatureSelection(threshold,features,target,res,k, nproc):
     'the function returns the selected features starting from the full dataset and removing features keeping the loss of information smaller than the threshold'
@@ -30,22 +30,52 @@ def backwardFeatureSelection(threshold,features,target,res,k, nproc):
     res["numSelected"].append(relevantFeatures.shape[1]) 
     return list(idMap.values()) 
 
-def scoreParallelFeatures(features, target, k, nproc):
+def forwardFeatureSelection(threshold,features,target,res,k, nproc):
+    'returns the relevant features for the target starting from an empty array and populating it with the features that have the best CMI score'
+
+    featureScores=[]
+    idMap = {k: k for k in range(features.shape[1])} # dictionary with original feature position
+    idSelected = []
+    selectedFeatures = [] # empty array at the beginning
+    CMIScore = 0 # cumulative loss of information
+
+    firstBest = sorted(estimateAllMI(features, target, k), key=lambda x:x[1], reverse=True) # ordered list (descending) of features MI scores
+    selectedFeatures.append(features[:, firstBest[0][0]]) # append the best scoring feature to result
+
+    remainingFeatures = np.delete(features, firstBest[0][0], axis=1) # now score the remaining features
+
+    while CMIScore < threshold and selectedFeatures.shape[1] <= features.shape[1]:
+        featureScores = scoreFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T)
+        sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
+        CMIScore += max(sortedScores[0][1], 0)
+        if CMIScore > threshold : break
+        selectedFeatures.append(features[:, sortedScores[0][0]]) # select highest scoring feature
+        print("Adding original feature: {0}".format(idMap[sortedScores[0][0]])) # original feature position
+        idSelected.append(idMap[sortedScores[0][0]])
+        remainingFeatures = np.delete(features, sortedScores[0][0], axis=1) # best scoring no longer needed for evaluation
+    res["numSelected"].append(np.array(selectedFeatures).T.shape[1]) 
+    return idSelected
+
+def scoreParallelFeatures(features, target, k, nproc, selected=None):
     'Versione con parallelismo dello score'
     args=[]
     for i in range(features.shape[1]):
-        args.append((features[:, i], target, np.delete(features,i,axis=1), k))
+        if selected is None:
+            selected = np.delete(features,i,axis=1)
+        args.append((features[:, i], target, selected, k))
     with Pool(nproc) as p:
         scores = p.starmap(CMIEstimate, args)
     scores = np.array(scores)
     return list(zip(range(len(scores)),scores))
 
-def scoreFeatures(features, target, k):
+def scoreFeatures(features, target, k, selected=None):
     'Ritorna una lista di features ID + punteggio CMI sul dato target'
     scores = np.zeros(features.shape[1])
 
     for col in range(features.shape[1]):
-        scores[col] = CMIEstimate(features[:, col], target, np.delete(features,col,axis=1), k)
+        if selected is None:
+            selected = np.delete(features,col,axis=1)
+        scores[col] = CMIEstimate(features[:, col], target, selected, k)
         print("CMI: {0}".format(scores[col]))
 
     return list(zip(range(len(scores)),scores))
