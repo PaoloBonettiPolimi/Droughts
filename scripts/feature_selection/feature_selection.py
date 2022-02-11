@@ -45,8 +45,11 @@ def forwardFeatureSelection(threshold,features,target,res,k, nproc):
     remainingFeatures = np.delete(features, firstBest[0][0], axis=1) # now score the remaining features
 
     while CMIScore < threshold and selectedFeatures.shape[1] <= features.shape[1]:
-        featureScores = scoreFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T)
-        sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
+        if nproc > 1:
+	    featureScores = scoreParallelFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T)
+        else:
+	    featureScores = scoreFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T)
+	sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
         CMIScore += max(sortedScores[0][1], 0)
         if CMIScore > threshold : break
         selectedFeatures.append(features[:, sortedScores[0][0]]) # select highest scoring feature

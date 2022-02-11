@@ -64,8 +64,11 @@ if __name__ == "__main__":
         res["delta"].append(delta)
         threshold = getThreshold(task, target, delta) # for the current delta this is the maximum information we want to loose in backward after pruning the worse features
         print("Current Threshold: {0}".format(threshold))
-        relevantFeatures = backwardFeatureSelection(threshold,features,target,res, args.k, args.nproc) # CMI feature selection
-        res["selectedFeatures"].append(relevantFeatures)
+        if args.backward == Ã't':
+	    relevantFeatures = backwardFeatureSelection(threshold,features,target,res, args.k, args.nproc) # CMI feature selection
+        else:
+	    relevantFeatures = forwardFeatureSelection(threshold,features,target,res,args.k,args.nproc)
+	res["selectedFeatures"].append(relevantFeatures)
         print("selected Features: {0}".format(res["selectedFeatures"]))
     #    res["accuracy"].append(computeAccuracy(task, relevantFeatures, target)) # performance di un modello lineare 
     
