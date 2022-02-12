@@ -40,22 +40,34 @@ def forwardFeatureSelection(threshold,features,target,res,k, nproc):
     CMIScore = 0 # cumulative loss of information
 
     firstBest = sorted(estimateAllMI(features, target, k), key=lambda x:x[1], reverse=True) # ordered list (descending) of features MI scores
+    print("Adding first best original feature: {0}".format(idMap[firstBest[0][0]])) # original feature position
     selectedFeatures.append(features[:, firstBest[0][0]]) # append the best scoring feature to result
+    idSelected.append(idMap[firstBest[0][0]]) # save in a list of selected features ID
+    
+    for a, b in list(idMap.items())[:-1]: # update of the dictionary storing original positions
+        if a >= firstBest[0][0]:
+            idMap[a] = idMap[a+1]
+    idMap.pop(max(idMap))
 
     remainingFeatures = np.delete(features, firstBest[0][0], axis=1) # now score the remaining features
 
-    while CMIScore < threshold and selectedFeatures.shape[1] <= features.shape[1]:
+    while CMIScore < threshold and np.array(selectedFeatures).T.shape[1] < features.shape[1]:
         if nproc > 1:
-	    featureScores = scoreParallelFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T)
-        else:
-	    featureScores = scoreFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T)
-	sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
+            featureScores = scoreParallelFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T)
+        else: 
+            featureScores = scoreFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T) 
+
+        sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
         CMIScore += max(sortedScores[0][1], 0)
-        if CMIScore > threshold : break
-        selectedFeatures.append(features[:, sortedScores[0][0]]) # select highest scoring feature
+        if CMIScore > threshold | sortedScores[0][1] < 0: break # stop execution even if all scores are negative
+        selectedFeatures.append(features[:, idMap[sortedScores[0][0]]]) # select highest scoring feature
+        remainingFeatures = np.delete(remainingFeatures, sortedScores[0][0], axis=1) # best scoring no longer needed for evaluation
         print("Adding original feature: {0}".format(idMap[sortedScores[0][0]])) # original feature position
+        for a, b in list(idMap.items())[:-1]: # update of the dictionary storing original positions
+            if a >= sortedScores[0][0]:
+                idMap[a] = idMap[a+1]
         idSelected.append(idMap[sortedScores[0][0]])
-        remainingFeatures = np.delete(features, sortedScores[0][0], axis=1) # best scoring no longer needed for evaluation
+        idMap.pop(max(idMap))
     res["numSelected"].append(np.array(selectedFeatures).T.shape[1]) 
     return idSelected
 
