@@ -5,7 +5,7 @@ import os
 import pickle
 import numpy as np
 
-from feature_selection.feature_selection import backwardFeatureSelection,getThreshold
+from feature_selection.feature_selection import backwardFeatureSelection,forwardFeatureSelection,getThreshold
 from feature_selection.preprocessing_functions import data_scale
 from training import computeAccuracy
 
@@ -64,13 +64,15 @@ if __name__ == "__main__":
         res["delta"].append(delta)
         threshold = getThreshold(task, target, delta) # for the current delta this is the maximum information we want to loose in backward after pruning the worse features
         print("Current Threshold: {0}".format(threshold))
-        if args.backward == Ã't':
-	    relevantFeatures = backwardFeatureSelection(threshold,features,target,res, args.k, args.nproc) # CMI feature selection
+
+        if args.backward == 't':
+            relevantFeatures = backwardFeatureSelection(threshold, features, target, res, args.k, args.nproc)
         else:
-	    relevantFeatures = forwardFeatureSelection(threshold,features,target,res,args.k,args.nproc)
-	res["selectedFeatures"].append(relevantFeatures)
+            relevantFeatures = forwardFeatureSelection(threshold,features,target,res,args.k,args.nproc)
+            
+        res["selectedFeatures"].append(relevantFeatures)
         print("selected Features: {0}".format(res["selectedFeatures"]))
-    #    res["accuracy"].append(computeAccuracy(task, relevantFeatures, target)) # performance di un modello lineare 
+        #res["accuracy"].append(computeAccuracy(task, relevantFeatures, target)) # performance di un modello lineare 
     
     for i in range(len(res["delta"])):
         print("Delta: {0}, final number of features: {1}, selected features IDs: {2}".format(res["delta"][i], res["numSelected"][i], res["selectedFeatures"][i]))
