@@ -1,0 +1,23 @@
+NPROC : 20
+Current Delta: 0
+Current Threshold: 0.0
+Adding first best original feature: 0
+selected Features: [[0]]
+Current Delta: 0.0005
+Current Threshold: 0.0015601769584016943
+Adding first best original feature: 0
+selected Features: [[0], [0]]
+Current Delta: 0.05
+Current Threshold: 0.15601769584016945
+Adding first best original feature: 0
+Adding original feature: 135
+selected Features: [[0], [0], [0, 136]]
+Current Delta: 0.25
+Current Threshold: 0.7800884792008471
+Adding first best original feature: 0
+Adding original feature: 135
+selected Features: [[0], [0], [0, 136], [0, 136]]
+Delta: 0, final number of features: 1, selected features IDs: [0]
+Delta: 0.0005, final number of features: 1, selected features IDs: [0]
+Delta: 0.05, final number of features: 2, selected features IDs: [0, 136]
+Delta: 0.25, final number of features: 2, selected features IDs: [0, 136]
