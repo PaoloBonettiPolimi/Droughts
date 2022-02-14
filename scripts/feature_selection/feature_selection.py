@@ -59,7 +59,7 @@ def forwardFeatureSelection(threshold,features,target,res,k, nproc):
 
         sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
         CMIScore += max(sortedScores[0][1], 0)
-        if CMIScore > threshold | sortedScores[0][1] < 0: break # stop execution even if all scores are negative
+        if CMIScore > threshold or sortedScores[0][1] < 0: break # stop execution even if all scores are negative
         selectedFeatures.append(features[:, idMap[sortedScores[0][0]]]) # select highest scoring feature
         remainingFeatures = np.delete(remainingFeatures, sortedScores[0][0], axis=1) # best scoring no longer needed for evaluation
         print("Adding original feature: {0}".format(idMap[sortedScores[0][0]])) # original feature position
