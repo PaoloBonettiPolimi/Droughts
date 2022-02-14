@@ -53,9 +53,9 @@ def forwardFeatureSelection(threshold,features,target,res,k, nproc):
 
     while CMIScore < threshold and np.array(selectedFeatures).T.shape[1] < features.shape[1]:
         if nproc > 1:
-            featureScores = scoreParallelFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T)
+            featureScores = scoreParallelFeatures(remainingFeatures, target, k, nproc, np.array(selectedFeatures).T)
         else: 
-            featureScores = scoreFeatures(remainingFeatures, target, k, nproc, np.array(selectedFeatures).T) 
+            featureScores = scoreFeatures(remainingFeatures, target, k, np.array(selectedFeatures).T) 
 
         sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
         CMIScore += max(sortedScores[0][1], 0)
