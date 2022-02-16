@@ -9,8 +9,8 @@ from feature_selection.feature_selection import backwardFeatureSelection,forward
 from feature_selection.preprocessing_functions import data_scale
 from training import computeAccuracy
 
-#DELTA_GRID = [0,0.0005 , 0.05, 0.25, 0.5, 1.0, 2.0]
-DELTA_GRID = [0,0.0005]
+DELTA_GRID = [0,0.0005 , 0.05, 0.25]
+#DELTA_GRID = [0,0.0005]
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
