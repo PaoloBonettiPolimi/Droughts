@@ -1,0 +1,71 @@
+NPROC : 20
+Current Delta: 0
+Current Threshold: 0.0
+Adding first best original feature: 200
+selected Features: [[200]]
+Current Delta: 0.0005
+Current Threshold: 0.0015522892100355607
+Adding first best original feature: 200
+selected Features: [[200], [200]]
+Current Delta: 0.05
+Current Threshold: 0.15522892100355606
+Adding first best original feature: 200
+Adding original feature: 30
+Adding original feature: 248
+Adding original feature: 254
+Adding original feature: 230
+Adding original feature: 186
+Adding original feature: 192
+Adding original feature: 193
+selected Features: [[200], [200], [200, 31, 249, 255, 231, 187, 193, 194]]
+Current Delta: 0.25
+Current Threshold: 0.7761446050177803
+Adding first best original feature: 200
+Adding original feature: 30
+Adding original feature: 248
+Adding original feature: 254
+Adding original feature: 230
+Adding original feature: 186
+Adding original feature: 192
+Adding original feature: 193
+selected Features: [[200], [200], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194]]
+Current Delta: 0.5
+Current Threshold: 1.5522892100355605
+Adding first best original feature: 200
+Adding original feature: 30
+Adding original feature: 248
+Adding original feature: 254
+Adding original feature: 230
+Adding original feature: 186
+Adding original feature: 192
+Adding original feature: 193
+selected Features: [[200], [200], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194]]
+Current Delta: 1.0
+Current Threshold: 3.104578420071121
+Adding first best original feature: 200
+Adding original feature: 30
+Adding original feature: 248
+Adding original feature: 254
+Adding original feature: 230
+Adding original feature: 186
+Adding original feature: 192
+Adding original feature: 193
+selected Features: [[200], [200], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194]]
+Current Delta: 2.0
+Current Threshold: 6.209156840142242
+Adding first best original feature: 200
+Adding original feature: 30
+Adding original feature: 248
+Adding original feature: 254
+Adding original feature: 230
+Adding original feature: 186
+Adding original feature: 192
+Adding original feature: 193
+selected Features: [[200], [200], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194], [200, 31, 249, 255, 231, 187, 193, 194]]
+Delta: 0, final number of features: 1, selected features IDs: [200]
+Delta: 0.0005, final number of features: 1, selected features IDs: [200]
+Delta: 0.05, final number of features: 8, selected features IDs: [200, 31, 249, 255, 231, 187, 193, 194]
+Delta: 0.25, final number of features: 8, selected features IDs: [200, 31, 249, 255, 231, 187, 193, 194]
+Delta: 0.5, final number of features: 8, selected features IDs: [200, 31, 249, 255, 231, 187, 193, 194]
+Delta: 1.0, final number of features: 8, selected features IDs: [200, 31, 249, 255, 231, 187, 193, 194]
+Delta: 2.0, final number of features: 8, selected features IDs: [200, 31, 249, 255, 231, 187, 193, 194]
