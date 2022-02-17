@@ -1,56 +1,22 @@
 NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
-Adding first best original feature: 184
-selected Features: [[184]]
+Adding first best original feature: 176
+selected Features: [[176]]
 Current Delta: 0.0005
-Current Threshold: 0.0020042684765595423
-Adding first best original feature: 184
-selected Features: [[184], [184]]
+Current Threshold: 0.002004268476387192
+Adding first best original feature: 176
+selected Features: [[176], [176]]
 Current Delta: 0.05
-Current Threshold: 0.20042684765595423
-Adding first best original feature: 184
-Adding original feature: 131
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[184], [184], [184, 132, 187, 193, 194]]
-Current Delta: 0.25
-Current Threshold: 1.002134238279771
-Adding first best original feature: 184
-Adding original feature: 131
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[184], [184], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194]]
-Current Delta: 0.5
-Current Threshold: 2.004268476559542
-Adding first best original feature: 184
-Adding original feature: 131
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[184], [184], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194]]
-Current Delta: 1.0
-Current Threshold: 4.008536953119084
-Adding first best original feature: 184
-Adding original feature: 131
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[184], [184], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194]]
-Current Delta: 2.0
-Current Threshold: 8.017073906238169
-Adding first best original feature: 184
-Adding original feature: 131
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[184], [184], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194], [184, 132, 187, 193, 194]]
-Delta: 0, final number of features: 1, selected features IDs: [184]
-Delta: 0.0005, final number of features: 1, selected features IDs: [184]
-Delta: 0.05, final number of features: 5, selected features IDs: [184, 132, 187, 193, 194]
-Delta: 0.25, final number of features: 5, selected features IDs: [184, 132, 187, 193, 194]
-Delta: 0.5, final number of features: 5, selected features IDs: [184, 132, 187, 193, 194]
-Delta: 1.0, final number of features: 5, selected features IDs: [184, 132, 187, 193, 194]
-Delta: 2.0, final number of features: 5, selected features IDs: [184, 132, 187, 193, 194]
+Current Threshold: 0.20042684763871918
+Adding first best original feature: 176
+Adding original feature: 132
+Adding original feature: 0
+Adding original feature: 108
+Adding original feature: 12
+Adding original feature: 172
+Adding original feature: 178
+selected Features: [[176], [176], [176, 133, 1, 109, 13, 173, 179]]
+Delta: 0, final number of features: 1, selected features IDs: [176]
+Delta: 0.0005, final number of features: 1, selected features IDs: [176]
+Delta: 0.05, final number of features: 7, selected features IDs: [176, 133, 1, 109, 13, 173, 179]

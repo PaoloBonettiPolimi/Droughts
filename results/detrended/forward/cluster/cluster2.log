@@ -1,30 +1,20 @@
-NPROC : 16
+NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
-Adding first best original feature: 0
-selected Features: [[0]]
+Adding first best original feature: 229
+selected Features: [[229]]
 Current Delta: 0.0005
-Current Threshold: 0.002821757098226939
-Adding first best original feature: 0
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[0], [0, 187, 193, 194]]
+Current Threshold: 0.00269933873055598
+Adding first best original feature: 229
+Adding original feature: 172
+Adding original feature: 178
+selected Features: [[229], [229, 173, 179]]
 Current Delta: 0.05
-Current Threshold: 0.2821757098226939
-Adding first best original feature: 0
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[0], [0, 187, 193, 194], [0, 187, 193, 194]]
-Current Delta: 0.25
-Current Threshold: 1.4108785491134694
-Adding first best original feature: 0
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[0], [0, 187, 193, 194], [0, 187, 193, 194], [0, 187, 193, 194]]
-Delta: 0, final number of features: 1, selected features IDs: [0]
-Delta: 0.0005, final number of features: 4, selected features IDs: [0, 187, 193, 194]
-Delta: 0.05, final number of features: 4, selected features IDs: [0, 187, 193, 194]
-Delta: 0.25, final number of features: 4, selected features IDs: [0, 187, 193, 194]
+Current Threshold: 0.269933873055598
+Adding first best original feature: 229
+Adding original feature: 172
+Adding original feature: 178
+selected Features: [[229], [229, 173, 179], [229, 173, 179]]
+Delta: 0, final number of features: 1, selected features IDs: [229]
+Delta: 0.0005, final number of features: 3, selected features IDs: [229, 173, 179]
+Delta: 0.05, final number of features: 3, selected features IDs: [229, 173, 179]
