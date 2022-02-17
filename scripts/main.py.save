@@ -22,9 +22,7 @@ if __name__ == "__main__":
     parser.add_argument("--filename", type=str) # full path to file, it must be a pickle
     args = parser.parse_args()
 
-    if args.nproc is None : args.nproc = 1 
-    if args.classification is None : args.classification = 0
-    print("NPROC : " + str(args.nproc))
+    print(" : " + str(args.nproc))
     #input_folder = os.path.join(os.getcwd(), "data", "real")
     #filenames = glob.glob(os.path.join(input_folder, "*.pickle")) # get dataset files in pickle format
 
@@ -53,7 +51,7 @@ if __name__ == "__main__":
 
     # set the kind of problem and the dictionary that will store the result
     task = 1 if args.classification == 1 else 0 # task=1 -> classification
-    
+
     res = {
         "delta" : [], # list with all deltas
         "numSelected" : [], #

@@ -40,6 +40,7 @@ def forwardFeatureSelection(threshold,features,target,res,k, nproc):
     CMIScore = 0 # cumulative loss of information
 
     firstBest = sorted(estimateAllMI(features, target, k), key=lambda x:x[1], reverse=True) # ordered list (descending) of features MI scores
+    print("Best MI score: {0}".format(firstBest[0][1])
     print("Adding first best original feature: {0}".format(idMap[firstBest[0][0]])) # original feature position
     selectedFeatures.append(features[:, firstBest[0][0]]) # append the best scoring feature to result
     idSelected.append(idMap[firstBest[0][0]]) # save in a list of selected features ID
@@ -59,7 +60,7 @@ def forwardFeatureSelection(threshold,features,target,res,k, nproc):
 
         sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
         CMIScore += max(sortedScores[0][1], 0)
-        if CMIScore > threshold or sortedScores[0][1] < 0: break # stop execution even if all scores are negative
+        if CMIScore > threshold or sortedScores[0][1] <= 0: break # stop execution even if all scores are negative
         selectedFeatures.append(features[:, idMap[sortedScores[0][0]]]) # select highest scoring feature
         remainingFeatures = np.delete(remainingFeatures, sortedScores[0][0], axis=1) # best scoring no longer needed for evaluation
         print("Adding original feature: {0}".format(idMap[sortedScores[0][0]])) # original feature position
@@ -91,7 +92,7 @@ def scoreFeatures(features, target, k, selected=None):
         if selected is None:
             selected = np.delete(features,col,axis=1)
         scores[col] = CMIEstimate(features[:, col], target, selected, k)
-        print("CMI: {0}".format(scores[col]))
+        if scores[col] > 0 : print("CMI: {0}".format(scores[col]))
 
     return list(zip(range(len(scores)),scores))
 
