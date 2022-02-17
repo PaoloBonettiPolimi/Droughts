@@ -1,21 +1,29 @@
+NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
+Best MI score: 1.2897381417152676
 Adding first best original feature: 0
 selected Features: [[0]]
 Current Delta: 0.0005
-Current Threshold: 0.004429992252174098
+Current Threshold: 0.004429992252179383
+Best MI score: 1.2897381417152676
 Adding first best original feature: 0
+Highest CMI score: 0.07010175417420461
 selected Features: [[0], [0]]
 Current Delta: 0.05
-Current Threshold: 0.4429992252174098
+Current Threshold: 0.4429992252179383
+Best MI score: 1.2897381417152676
 Adding first best original feature: 0
+Highest CMI score: 0.07010175417420461
 Adding original feature: 210
+Highest CMI score: 0.032336358585985936
 Adding original feature: 218
+Highest CMI score: 0.0248053659218046
 Adding original feature: 215
+Highest CMI score: 0.00039523453865752955
 Adding original feature: 209
-Adding original feature: 171
-Adding original feature: 177
-selected Features: [[0], [0], [0, 211, 219, 216, 211, 172, 178]]
+Highest CMI score: 0.0
+selected Features: [[0], [0], [0, 210, 218, 215, 209]]
 Delta: 0, final number of features: 1, selected features IDs: [0]
 Delta: 0.0005, final number of features: 1, selected features IDs: [0]
-Delta: 0.05, final number of features: 7, selected features IDs: [0, 211, 219, 216, 211, 172, 178]
+Delta: 0.05, final number of features: 5, selected features IDs: [0, 210, 218, 215, 209]

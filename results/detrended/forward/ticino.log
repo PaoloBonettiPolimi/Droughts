@@ -1,25 +1,37 @@
+NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
+Best MI score: 0.08826892863554614
 Adding first best original feature: 126
 selected Features: [[126]]
 Current Delta: 0.0005
-Current Threshold: 0.0024434165960529686
+Current Threshold: 0.0024434165960002248
+Best MI score: 0.08826892863554614
 Adding first best original feature: 126
+Highest CMI score: 0.02813283358882908
 selected Features: [[126], [126]]
 Current Delta: 0.05
-Current Threshold: 0.24434165960529686
+Current Threshold: 0.2443416596000225
+Best MI score: 0.08826892863554614
 Adding first best original feature: 126
+Highest CMI score: 0.02813283358882908
 Adding original feature: 190
+Highest CMI score: 0.017968426808248852
 Adding original feature: 92
+Highest CMI score: 0.009008635342272253
 Adding original feature: 151
+Highest CMI score: 0.003768479798772567
 Adding original feature: 57
+Highest CMI score: 0.0019652373810261636
 Adding original feature: 17
+Highest CMI score: 0.0013053747007865102
 Adding original feature: 238
+Highest CMI score: 0.0009112752288883974
 Adding original feature: 232
+Highest CMI score: 0.00022663015043122847
 Adding original feature: 226
-Adding original feature: 171
-Adding original feature: 177
-selected Features: [[126], [126], [126, 191, 93, 152, 58, 18, 239, 233, 227, 172, 178]]
+Highest CMI score: 0.0
+selected Features: [[126], [126], [126, 190, 92, 151, 57, 17, 238, 232, 226]]
 Delta: 0, final number of features: 1, selected features IDs: [126]
 Delta: 0.0005, final number of features: 1, selected features IDs: [126]
-Delta: 0.05, final number of features: 11, selected features IDs: [126, 191, 93, 152, 58, 18, 239, 233, 227, 172, 178]
+Delta: 0.05, final number of features: 9, selected features IDs: [126, 190, 92, 151, 57, 17, 238, 232, 226]
