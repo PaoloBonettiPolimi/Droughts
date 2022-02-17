@@ -1,21 +1,20 @@
-NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
-Adding first best original feature: 127
-selected Features: [[127]]
+Adding first best original feature: 126
+selected Features: [[126]]
 Current Delta: 0.0005
-Current Threshold: 0.0018620705170116216
-Adding first best original feature: 127
-selected Features: [[127], [127]]
+Current Threshold: 0.0018620705167865408
+Adding first best original feature: 126
+selected Features: [[126], [126]]
 Current Delta: 0.05
-Current Threshold: 0.18620705170116217
-Adding first best original feature: 127
-Adding original feature: 31
-Adding original feature: 19
-Adding original feature: 114
-Adding original feature: 172
-Adding original feature: 178
-selected Features: [[127], [127], [127, 32, 20, 115, 173, 179]]
-Delta: 0, final number of features: 1, selected features IDs: [127]
-Delta: 0.0005, final number of features: 1, selected features IDs: [127]
-Delta: 0.05, final number of features: 6, selected features IDs: [127, 32, 20, 115, 173, 179]
+Current Threshold: 0.1862070516786541
+Adding first best original feature: 126
+Adding original feature: 30
+Adding original feature: 18
+Adding original feature: 113
+Adding original feature: 171
+Adding original feature: 177
+selected Features: [[126], [126], [126, 31, 19, 114, 172, 178]]
+Delta: 0, final number of features: 1, selected features IDs: [126]
+Delta: 0.0005, final number of features: 1, selected features IDs: [126]
+Delta: 0.05, final number of features: 6, selected features IDs: [126, 31, 19, 114, 172, 178]
