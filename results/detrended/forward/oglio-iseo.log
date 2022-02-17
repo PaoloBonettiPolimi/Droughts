@@ -1,66 +1,18 @@
 NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
-Adding first best original feature: 114
-selected Features: [[114]]
+Adding first best original feature: 115
+selected Features: [[115]]
 Current Delta: 0.0005
-Current Threshold: 0.0010520776576842129
-Adding first best original feature: 114
-selected Features: [[114], [114]]
+Current Threshold: 0.001052077657540637
+Adding first best original feature: 115
+selected Features: [[115], [115]]
 Current Delta: 0.05
-Current Threshold: 0.10520776576842128
-Adding first best original feature: 114
-Adding original feature: 138
-Adding original feature: 59
-Adding original feature: 78
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[114], [114], [114, 139, 60, 79, 187, 193, 194]]
-Current Delta: 0.25
-Current Threshold: 0.5260388288421064
-Adding first best original feature: 114
-Adding original feature: 138
-Adding original feature: 59
-Adding original feature: 78
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[114], [114], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194]]
-Current Delta: 0.5
-Current Threshold: 1.0520776576842128
-Adding first best original feature: 114
-Adding original feature: 138
-Adding original feature: 59
-Adding original feature: 78
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[114], [114], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194]]
-Current Delta: 1.0
-Current Threshold: 2.1041553153684256
-Adding first best original feature: 114
-Adding original feature: 138
-Adding original feature: 59
-Adding original feature: 78
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[114], [114], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194]]
-Current Delta: 2.0
-Current Threshold: 4.208310630736851
-Adding first best original feature: 114
-Adding original feature: 138
-Adding original feature: 59
-Adding original feature: 78
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[114], [114], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194], [114, 139, 60, 79, 187, 193, 194]]
-Delta: 0, final number of features: 1, selected features IDs: [114]
-Delta: 0.0005, final number of features: 1, selected features IDs: [114]
-Delta: 0.05, final number of features: 7, selected features IDs: [114, 139, 60, 79, 187, 193, 194]
-Delta: 0.25, final number of features: 7, selected features IDs: [114, 139, 60, 79, 187, 193, 194]
-Delta: 0.5, final number of features: 7, selected features IDs: [114, 139, 60, 79, 187, 193, 194]
-Delta: 1.0, final number of features: 7, selected features IDs: [114, 139, 60, 79, 187, 193, 194]
-Delta: 2.0, final number of features: 7, selected features IDs: [114, 139, 60, 79, 187, 193, 194]
+Current Threshold: 0.10520776575406371
+Adding first best original feature: 115
+Adding original feature: 139
+Adding original feature: 60
+selected Features: [[115], [115], [115, 140, 61]]
+Delta: 0, final number of features: 1, selected features IDs: [115]
+Delta: 0.0005, final number of features: 1, selected features IDs: [115]
+Delta: 0.05, final number of features: 3, selected features IDs: [115, 140, 61]

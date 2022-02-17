@@ -1,81 +1,26 @@
 NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
-Adding first best original feature: 0
-selected Features: [[0]]
+Adding first best original feature: 1
+selected Features: [[1]]
 Current Delta: 0.0005
-Current Threshold: 0.0014631372758400125
-Adding first best original feature: 0
-selected Features: [[0], [0]]
+Current Threshold: 0.0014631372761879072
+Adding first best original feature: 1
+selected Features: [[1], [1]]
 Current Delta: 0.05
-Current Threshold: 0.14631372758400127
-Adding first best original feature: 0
-Adding original feature: 39
-Adding original feature: 131
-Adding original feature: 210
-Adding original feature: 252
-Adding original feature: 209
-Adding original feature: 234
-Adding original feature: 186
-Adding original feature: 192
+Current Threshold: 0.14631372761879072
+Adding first best original feature: 1
+Adding original feature: 0
+Adding original feature: 233
+Adding original feature: 195
 Adding original feature: 193
-selected Features: [[0], [0], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]]
-Current Delta: 0.25
-Current Threshold: 0.7315686379200063
-Adding first best original feature: 0
-Adding original feature: 39
-Adding original feature: 131
-Adding original feature: 210
-Adding original feature: 252
-Adding original feature: 209
-Adding original feature: 234
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[0], [0], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]]
-Current Delta: 0.5
-Current Threshold: 1.4631372758400125
-Adding first best original feature: 0
-Adding original feature: 39
-Adding original feature: 131
-Adding original feature: 210
-Adding original feature: 252
-Adding original feature: 209
-Adding original feature: 234
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[0], [0], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]]
-Current Delta: 1.0
-Current Threshold: 2.926274551680025
-Adding first best original feature: 0
-Adding original feature: 39
-Adding original feature: 131
-Adding original feature: 210
-Adding original feature: 252
-Adding original feature: 209
-Adding original feature: 234
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[0], [0], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]]
-Current Delta: 2.0
-Current Threshold: 5.85254910336005
-Adding first best original feature: 0
-Adding original feature: 39
-Adding original feature: 131
-Adding original feature: 210
-Adding original feature: 252
-Adding original feature: 209
-Adding original feature: 234
-Adding original feature: 186
-Adding original feature: 192
-Adding original feature: 193
-selected Features: [[0], [0], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194], [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]]
-Delta: 0, final number of features: 1, selected features IDs: [0]
-Delta: 0.0005, final number of features: 1, selected features IDs: [0]
-Delta: 0.05, final number of features: 10, selected features IDs: [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]
-Delta: 0.25, final number of features: 10, selected features IDs: [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]
-Delta: 0.5, final number of features: 10, selected features IDs: [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]
-Delta: 1.0, final number of features: 10, selected features IDs: [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]
-Delta: 2.0, final number of features: 10, selected features IDs: [0, 40, 132, 211, 253, 211, 235, 187, 193, 194]
+Adding original feature: 218
+Adding original feature: 206
+Adding original feature: 236
+Adding original feature: 224
+Adding original feature: 172
+Adding original feature: 178
+selected Features: [[1], [1], [1, 2, 234, 196, 194, 219, 207, 237, 225, 173, 179]]
+Delta: 0, final number of features: 1, selected features IDs: [1]
+Delta: 0.0005, final number of features: 1, selected features IDs: [1]
+Delta: 0.05, final number of features: 11, selected features IDs: [1, 2, 234, 196, 194, 219, 207, 237, 225, 173, 179]
