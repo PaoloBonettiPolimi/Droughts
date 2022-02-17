@@ -20,7 +20,7 @@ def backwardFeatureSelection(threshold,features,target,res,k, nproc):
         
         sortedScores = sorted(featureScores, key=lambda x:x[1]) # lista ordinata (ascending) in base al punteggio di ogni feature
         CMIScore += max(sortedScores[0][1],0) # se il punteggio più basso è negativo, prendo 0
-        if CMIScore > threshold: break
+        if CMIScore >= threshold: break
         relevantFeatures = np.delete(relevantFeatures, sortedScores[0][0], axis=1) # tolgo la feature (column) con punteggio più basso 
         print("Removing original feature: {0}".format(idMap[sortedScores[0][0]])) # original feature position
         for a, b in list(idMap.items())[:-1]: # update of the dictionary storing original positions
@@ -60,7 +60,7 @@ def forwardFeatureSelection(threshold,features,target,res,k, nproc):
 
         sortedScores = sorted(featureScores, key=lambda x:x[1], reverse=True) # scores in descending order
         CMIScore += max(sortedScores[0][1], 0)
-        if CMIScore > threshold or sortedScores[0][1] <= 0: break # stop execution even if all scores are negative
+        if CMIScore >= threshold or sortedScores[0][1] <= 0: break # stop execution even if all scores are negative
         selectedFeatures.append(features[:, idMap[sortedScores[0][0]]]) # select highest scoring feature
         remainingFeatures = np.delete(remainingFeatures, sortedScores[0][0], axis=1) # best scoring no longer needed for evaluation
         print("Adding original feature: {0}".format(idMap[sortedScores[0][0]])) # original feature position
