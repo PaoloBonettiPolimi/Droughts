@@ -1,24 +1,24 @@
 NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
-Best MI score: 0.10976511722413596
+Best MI score: 0.10974713511544332
 Adding first best original feature: 114
 selected Features: [[114]]
 Current Delta: 0.0005
-Current Threshold: 0.0010520776575492377
-Best MI score: 0.10976511722413596
+Current Threshold: 0.0010520776574202348
+Best MI score: 0.10974713511544332
 Adding first best original feature: 114
-Highest CMI score: 0.037922659688824495
+Highest CMI score: 0.03794064179751713
 selected Features: [[114], [114]]
 Current Delta: 0.05
-Current Threshold: 0.10520776575492377
-Best MI score: 0.10976511722413596
+Current Threshold: 0.10520776574202349
+Best MI score: 0.10974713511544332
 Adding first best original feature: 114
-Highest CMI score: 0.037922659688824495
+Highest CMI score: 0.03794064179751713
 Adding original feature: 138
-Highest CMI score: 0.014295663498594985
+Highest CMI score: 0.014305304794641677
 Adding original feature: 59
-Highest CMI score: 0.008258599372945985
+Highest CMI score: 0.008245453188198193
 Adding original feature: 78
 Highest CMI score: 0.0
 selected Features: [[114], [114], [114, 138, 59, 78]]

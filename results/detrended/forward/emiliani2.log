@@ -2,30 +2,30 @@ NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
 Best MI score: 0.14852719347446472
-Adding first best original feature: 241
-selected Features: [[241]]
+Adding first best original feature: 242
+selected Features: [[242]]
 Current Delta: 0.0005
-Current Threshold: 0.0017552098373700244
+Current Threshold: 0.0017552098372317821
 Best MI score: 0.14852719347446472
-Adding first best original feature: 241
-Highest CMI score: 0.017131036367129704
-selected Features: [[241], [241]]
+Adding first best original feature: 242
+Highest CMI score: 0.01712575681483572
+selected Features: [[242], [242]]
 Current Delta: 0.05
-Current Threshold: 0.17552098373700245
+Current Threshold: 0.17552098372317823
 Best MI score: 0.14852719347446472
-Adding first best original feature: 241
-Highest CMI score: 0.017131036367129704
+Adding first best original feature: 242
+Highest CMI score: 0.01712575681483572
 Adding original feature: 114
-Highest CMI score: 0.01791712113780236
+Highest CMI score: 0.01791475870572659
 Adding original feature: 60
-Highest CMI score: 0.005223629763552257
+Highest CMI score: 0.005233381753571104
 Adding original feature: 42
-Highest CMI score: 0.003474234908422913
+Highest CMI score: 0.0034680431315408655
 Adding original feature: 29
-Highest CMI score: 0.0003255421209251985
-Adding original feature: 223
+Highest CMI score: 0.00033335724069638584
+Adding original feature: 224
 Highest CMI score: 0.0
-selected Features: [[241], [241], [241, 114, 60, 42, 29, 223]]
-Delta: 0, final number of features: 1, selected features IDs: [241]
-Delta: 0.0005, final number of features: 1, selected features IDs: [241]
-Delta: 0.05, final number of features: 6, selected features IDs: [241, 114, 60, 42, 29, 223]
+selected Features: [[242], [242], [242, 114, 60, 42, 29, 224]]
+Delta: 0, final number of features: 1, selected features IDs: [242]
+Delta: 0.0005, final number of features: 1, selected features IDs: [242]
+Delta: 0.05, final number of features: 6, selected features IDs: [242, 114, 60, 42, 29, 224]

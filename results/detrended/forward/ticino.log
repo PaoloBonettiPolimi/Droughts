@@ -1,37 +1,37 @@
 NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
-Best MI score: 0.08826864912961203
+Best MI score: 0.08826489781343247
 Adding first best original feature: 126
 selected Features: [[126]]
 Current Delta: 0.0005
-Current Threshold: 0.00244341659587699
-Best MI score: 0.08826864912961203
+Current Threshold: 0.0024434165960529742
+Best MI score: 0.08826489781343247
 Adding first best original feature: 126
-Highest CMI score: 0.028134637181393654
+Highest CMI score: 0.02814445020576259
 selected Features: [[126], [126]]
 Current Delta: 0.05
-Current Threshold: 0.24434165958769902
-Best MI score: 0.08826864912961203
+Current Threshold: 0.2443416596052974
+Best MI score: 0.08826489781343247
 Adding first best original feature: 126
-Highest CMI score: 0.028134637181393654
-Adding original feature: 195
-Highest CMI score: 0.017966902721618383
+Highest CMI score: 0.02814445020576259
+Adding original feature: 196
+Highest CMI score: 0.017956344691420406
 Adding original feature: 92
-Highest CMI score: 0.008661959515646439
+Highest CMI score: 0.008847782320751535
 Adding original feature: 151
-Highest CMI score: 0.003980028132549579
+Highest CMI score: 0.004072021959136779
 Adding original feature: 57
-Highest CMI score: 0.002048348833369684
+Highest CMI score: 0.0019393954554056403
 Adding original feature: 17
-Highest CMI score: 0.0013697838492439662
-Adding original feature: 243
-Highest CMI score: 0.0008791163603886765
-Adding original feature: 237
-Highest CMI score: 0.00022639947105157487
-Adding original feature: 231
+Highest CMI score: 0.0012835487924904576
+Adding original feature: 244
+Highest CMI score: 0.0008879195399494055
+Adding original feature: 238
+Highest CMI score: 0.00022313305750604195
+Adding original feature: 232
 Highest CMI score: 0.0
-selected Features: [[126], [126], [126, 195, 92, 151, 57, 17, 243, 237, 231]]
+selected Features: [[126], [126], [126, 196, 92, 151, 57, 17, 244, 238, 232]]
 Delta: 0, final number of features: 1, selected features IDs: [126]
 Delta: 0.0005, final number of features: 1, selected features IDs: [126]
-Delta: 0.05, final number of features: 9, selected features IDs: [126, 195, 92, 151, 57, 17, 243, 237, 231]
+Delta: 0.05, final number of features: 9, selected features IDs: [126, 196, 92, 151, 57, 17, 244, 238, 232]

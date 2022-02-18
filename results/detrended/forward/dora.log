@@ -2,26 +2,26 @@ NPROC : 20
 Current Delta: 0
 Current Threshold: 0.0
 Best MI score: 0.12179009183052854
-Adding first best original feature: 189
-selected Features: [[189]]
+Adding first best original feature: 190
+selected Features: [[190]]
 Current Delta: 0.0005
-Current Threshold: 0.0015522892097524059
+Current Threshold: 0.001552289209874383
 Best MI score: 0.12179009183052854
-Adding first best original feature: 189
-Highest CMI score: 0.04819706103992134
-selected Features: [[189], [189]]
+Adding first best original feature: 190
+Highest CMI score: 0.048190999331732
+selected Features: [[190], [190]]
 Current Delta: 0.05
-Current Threshold: 0.1552289209752406
+Current Threshold: 0.15522892098743832
 Best MI score: 0.12179009183052854
-Adding first best original feature: 189
-Highest CMI score: 0.04819706103992134
+Adding first best original feature: 190
+Highest CMI score: 0.048190999331732
 Adding original feature: 30
-Highest CMI score: 0.0017360733818258256
+Highest CMI score: 0.0014042158543584038
 Adding original feature: 38
-Highest CMI score: 0.001266585600681186
-Adding original feature: 219
+Highest CMI score: 0.0012569070967113072
+Adding original feature: 220
 Highest CMI score: 0.0
-selected Features: [[189], [189], [189, 30, 38, 219]]
-Delta: 0, final number of features: 1, selected features IDs: [189]
-Delta: 0.0005, final number of features: 1, selected features IDs: [189]
-Delta: 0.05, final number of features: 4, selected features IDs: [189, 30, 38, 219]
+selected Features: [[190], [190], [190, 30, 38, 220]]
+Delta: 0, final number of features: 1, selected features IDs: [190]
+Delta: 0.0005, final number of features: 1, selected features IDs: [190]
+Delta: 0.05, final number of features: 4, selected features IDs: [190, 30, 38, 220]
