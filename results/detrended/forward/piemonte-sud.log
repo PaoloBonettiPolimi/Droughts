@@ -5,16 +5,16 @@ Best MI score: 0.11157868306452082
 Adding first best original feature: 175
 selected Features: [[175]]
 Current Delta: 0.0005
-Current Threshold: 0.0020042684763881833
+Current Threshold: 0.002004268476414958
 Best MI score: 0.11157868306452082
 Adding first best original feature: 175
-Highest CMI score: 0.034478451445551506
+Highest CMI score: 0.03447030028152548
 selected Features: [[175], [175]]
 Current Delta: 0.05
-Current Threshold: 0.20042684763881835
+Current Threshold: 0.2004268476414958
 Best MI score: 0.11157868306452082
 Adding first best original feature: 175
-Highest CMI score: 0.034478451445551506
+Highest CMI score: 0.03447030028152548
 Adding original feature: 131
 Highest CMI score: 0.0
 selected Features: [[175], [175], [175, 131]]
