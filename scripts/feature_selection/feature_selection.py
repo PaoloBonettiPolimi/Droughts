@@ -40,6 +40,8 @@ def forwardFeatureSelection(threshold,features,target,res,k, nproc):
     CMIScore = 0 # cumulative loss of information
 
     firstBest = sorted(estimateAllMI(features, target, k), key=lambda x:x[1], reverse=True) # ordered list (descending) of features MI scores
+    print("----- MI Scores -----")
+    print(firstBest)
     print("Best MI score: {0}".format(firstBest[0][1]))
     print("Adding first best original feature: {0}".format(idMap[firstBest[0][0]])) # original feature position
     selectedFeatures.append(features[:, firstBest[0][0]]) # append the best scoring feature to result
