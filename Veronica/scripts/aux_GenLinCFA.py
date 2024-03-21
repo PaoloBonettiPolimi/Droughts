@@ -56,7 +56,14 @@ def compute_r2(x_train, y_train, x_val, y_val):
     y_pred = regr.predict(x_val)
     return r2_score(y_val, y_pred)
 
-def prepare_target(colname,max_train='2013-11-22', max_val='2018-04-10', max_test='2022-06-24', path='/Users/paolo/Documents/OneDrive - Politecnico di Milano/droughts/csv_VHI/Emiliani2.csv', window_size = 1):
+def prepare_target(
+    colname,
+    max_train="2013-11-22",
+    max_val="2018-04-10",
+    max_test="2022-06-24",
+    path="/Users/paolo/Documents/OneDrive - Politecnico di Milano/droughts/csv_VHI/Emiliani2.csv",
+    window_size=1,
+):
     target_df = pd.read_csv(path)
     target_df = target_df.rename({'Unnamed: 0':'date'},axis=1)
     target_df['mean'] = target_df['mean'].rolling(window = window_size, min_periods = 0).mean()
@@ -83,9 +90,16 @@ def check_no_peaks(row, df):
     return res
 
 # no standardization
-def prepare_target_binary(colname,max_train='2013-11-22', max_val='2018-04-10', max_test='2022-06-24', path='/Users/paolo/Documents/OneDrive - Politecnico di Milano/droughts/csv_VHI/Emiliani2.csv', threshold = None, 
-                          nopeaks = False, window_size = 1):
-	
+def prepare_target_binary(
+    colname,
+    max_train="2013-11-22",
+    max_val="2018-04-10",
+    max_test="2022-06-24",
+    path="/Users/paolo/Documents/OneDrive - Politecnico di Milano/droughts/csv_VHI/Emiliani2.csv",
+    threshold=None,
+    nopeaks=False,
+    window_size=1,
+):
     target_df = pd.read_csv(path).rename({'Unnamed: 0':'date'},axis=1)
     
     target_df['mean'] = target_df['mean'].rolling(window = window_size, min_periods = 0).mean()
@@ -163,9 +177,23 @@ def tuning_GenLinCFA(df_trainVal_unfolded_std_withTar, neigh, eps, min_aggreg, m
         #print(output)
     return output
    
-def aggregate_unfolded_data(path,colnames, target_df_trainVal, eps, multiple=False, max_train='2013-11-22', max_val='2018-04-10', max_test='2022-12-31', neigh=1, 
-                            min_aggreg = 3, max_aggreg = 10, curr_seed = 42, shuffle = False, aggreg_small_coord_groups = True, scale = 0.1):
-
+def aggregate_unfolded_data(
+    path,
+    colnames,
+    target_df_trainVal,
+    eps,
+    multiple=False,
+    max_train="2013-11-22",
+    max_val="2018-04-10",
+    max_test="2022-12-31",
+    neigh=1,
+    min_aggreg=3,
+    max_aggreg=10,
+    curr_seed=42,
+    shuffle=False,
+    aggreg_small_coord_groups=True,
+    scale=0.1,
+):
     aggregate_trainVal = pd.DataFrame()
     aggregate_test = pd.DataFrame()
     outputs = []
@@ -201,8 +229,16 @@ def aggregate_unfolded_data(path,colnames, target_df_trainVal, eps, multiple=Fal
 
     return outputs,aggregate_trainVal,aggregate_test 
 
-def aggregate_data_withoutUnfolding(df, target_df_trainVal, eps, multiple=False, max_train='2013-11-22', max_val='2018-04-10', max_test='2022-12-31', neigh=1):
-
+def aggregate_data_withoutUnfolding(
+    df,
+    target_df_trainVal,
+    eps,
+    multiple=False,
+    max_train="2013-11-22",
+    max_val="2018-04-10",
+    max_test="2022-12-31",
+    neigh=1,
+):
     aggregate_trainVal = pd.DataFrame()
     aggregate_test = pd.DataFrame()
 
@@ -232,8 +268,18 @@ def aggregate_data_withoutUnfolding(df, target_df_trainVal, eps, multiple=False,
         
     return output,aggregate_trainVal,aggregate_test 
     
-def aggregate_unfolded_data_onlyTrain(path,colnames, target_df_train, target_df_val, eps, multiple=False, max_train='2013-11-22', max_val='2018-04-10', max_test='2022-12-31', neigh=1):
-
+def aggregate_unfolded_data_onlyTrain(
+    path,
+    colnames,
+    target_df_train,
+    target_df_val,
+    eps,
+    multiple=False,
+    max_train="2013-11-22",
+    max_val="2018-04-10",
+    max_test="2022-12-31",
+    neigh=1,
+):
     aggregate_train = pd.DataFrame()
     aggregate_val = pd.DataFrame()
     aggregate_test = pd.DataFrame()
