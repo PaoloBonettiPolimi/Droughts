@@ -91,10 +91,10 @@ def prepare_target_binary(colname,max_train='2013-11-22', max_val='2018-04-10', 
     target_df['mean'] = target_df['mean'].rolling(window = window_size, min_periods = 0).mean()
     
     if threshold != None:
-    	target_df['mean_std'] = target_df.apply(lambda x: 1 if x['mean']>threshold else 0, axis=1)
+        target_df['mean_std'] = target_df.apply(lambda x: 1 if x['mean']>threshold else 0, axis=1)
     
     if nopeaks:
-    	target_df['mean_std'] = target_df.apply(lambda x: check_no_peaks(x, target_df), axis=1)
+        target_df['mean_std'] = target_df.apply(lambda x: check_no_peaks(x, target_df), axis=1)
     
     target_df_train = target_df.loc[target_df['date']<=max_train,:].copy()
     target_df_val = target_df.loc[(target_df['date']>max_train) & (target_df['date']<=max_val),:].copy()
@@ -102,12 +102,12 @@ def prepare_target_binary(colname,max_train='2013-11-22', max_val='2018-04-10', 
     target_df_trainVal = pd.concat([target_df_train,target_df_val],axis=0).reset_index(drop=True)
     
     if threshold == None:
-   		target_df_train['mean_std'], target_df_val['mean_std'], target_df_test['mean_std'] = standardize(target_df_train['mean'].values.reshape(-1,1), target_df_val['mean'].values.reshape(-1,1), target_df_test['mean'].values.reshape(-1,1))
-   		target_df_train['mean_std'] = target_df_train.apply(lambda x: 1 if x['mean_std']>0 else 0, axis=1)
-   		target_df_val['mean_std'] = target_df_val.apply(lambda x: 1 if x['mean_std']>0 else 0, axis=1)
-   		target_df_test['mean_std'] = target_df_test.apply(lambda x: 1 if x['mean_std']>0 else 0, axis=1)
-   		target_df_trainVal = pd.concat([target_df_train,target_df_val],axis=0).reset_index(drop=True)
-   		
+           target_df_train['mean_std'], target_df_val['mean_std'], target_df_test['mean_std'] = standardize(target_df_train['mean'].values.reshape(-1,1), target_df_val['mean'].values.reshape(-1,1), target_df_test['mean'].values.reshape(-1,1))
+           target_df_train['mean_std'] = target_df_train.apply(lambda x: 1 if x['mean_std']>0 else 0, axis=1)
+           target_df_val['mean_std'] = target_df_val.apply(lambda x: 1 if x['mean_std']>0 else 0, axis=1)
+           target_df_test['mean_std'] = target_df_test.apply(lambda x: 1 if x['mean_std']>0 else 0, axis=1)
+           target_df_trainVal = pd.concat([target_df_train,target_df_val],axis=0).reset_index(drop=True)
+           
 
     print(f'target samples: {target_df_train}\n target shapes: {target_df_train.shape, target_df_val.shape, target_df_trainVal.shape, target_df_test.shape}')
     
@@ -130,9 +130,9 @@ def prepare_features(path, colName = None, multiple=False, max_train='2013-11-22
     df_test = df.loc[(df['date']>max_val) & (df['date']<=max_test),:]
     
     if all_features:
-    	colName = df.columns[5:]
+        colName = df.columns[5:]
     else:
-    	colName = [colName]
+        colName = [colName]
     
     df_train_unfolded = unfold_dataset(df_train.x.unique(), df_train.y.unique(), df_train, colName)
     df_train_unfolded = df_train_unfolded.loc[:,np.std(df_train_unfolded,axis=0)>0]
@@ -176,9 +176,9 @@ def aggregate_unfolded_data(path,colnames, target_df_trainVal, eps, multiple=Fal
         df_train_unfolded_std,df_val_unfolded_std,df_test_unfolded_std,df_trainVal_unfolded_std = prepare_features(path,col,multiple,max_train,max_val,max_test)
         
         if shuffle:
-        	# shuffle columns
-        	df_trainVal_unfolded_std = df_trainVal_unfolded_std[np.random.default_rng(seed=curr_seed).permutation(df_trainVal_unfolded_std.columns.values)] 
-        	df_test_unfolded_std = df_test_unfolded_std[np.random.default_rng(seed=curr_seed).permutation(df_test_unfolded_std.columns.values)]
+            # shuffle columns
+            df_trainVal_unfolded_std = df_trainVal_unfolded_std[np.random.default_rng(seed=curr_seed).permutation(df_trainVal_unfolded_std.columns.values)] 
+            df_test_unfolded_std = df_test_unfolded_std[np.random.default_rng(seed=curr_seed).permutation(df_test_unfolded_std.columns.values)]
         
         df_trainVal_unfolded_std_withTar = pd.concat((df_trainVal_unfolded_std,target_df_trainVal['mean_std']), axis=1)
       
@@ -308,7 +308,7 @@ def FS_with_logisticWrapper(aggregate_trainVal, target_df_train, target_df_val, 
     selected_cols = []
     best_selected_cols = []
     best_score = -100
-	
+    
     # target_df_train['mean_std'] = target_df_train.apply(lambda x: np.sign(x.mean_std), axis=1)
     # target_df_val['mean_std'] = target_df_val.apply(lambda x: np.sign(x.mean_std), axis=1)
 
